@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tạo Trang Login</title>
+     <link rel="stylesheet" href="css/styledb.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body >
+    <section>
+        <div class="noi-dung" >
+            <div class="form">
+                
+                <form action=""  style="padding: 30px;" id="form-1" name="form-1">
+                    <h2>Nhập Thông Tin Đặt bàn</h2>
+                    <div class="input-form">
+                        <span>Tên Người Dùng</span>
+                        <input type="text" name="fullname" id="fullname" placeholder="Họ Và tên">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="input-form">
+                        <span>Số Điện Thoại</span>
+                        <input type="tel" id="sdt" name="sdt" placeholder="Số Điện Thoại">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="input-form">
+                        <span>Email</span>
+                        <input type="email" id="email" name="email" placeholder="ví Dụ: abc@gmail.com">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="input-form">
+                        <span>Ngày/Tháng/Năm</span>
+                        <input type="date" name="date" placeholder="ví Dụ 13/02/2022">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="input-form">
+                        <span>Giờ</span>
+                        <input type="time" name="time" placeholder="Ví Dụ 12:45 SA">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="input-form">
+                        <span>Tin Nhắn cho nhà hàng</span>
+                        <input type="text" name="" placeholder="Những điều nhà hàng cần chú ý">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="input-form">
+                        <input type="submit" value="Đặt Bàn">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <Script src="javascript/validator.js"></Script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+          // Mong muốn của chúng ta
+          Validator({
+            form: '#form-1',
+            formGroupSelector: '.input-form',
+            errorSelector: '.form-message',
+            rules: [
+              Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+              Validator.isSdt('#sdt', 10 ,'Vui lòng Nhập Số Điện Thoại và nó phải đúng'),
+              Validator.isEmail('#email'),
+              Validator.minLength('#password', 6),
+              Validator.istime('#time'),
+              Validator.isdate('#date'),
+            ],
+          });
+        });
+  
+      </script>
+</body>
+</html>
