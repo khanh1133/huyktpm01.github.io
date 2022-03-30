@@ -32,7 +32,7 @@ menuTabs.addEventListener("click",function(e){
 
      }
 })
-//-----------------Animation-----------
+//-----------------Animation-------------------
 AOS.init();
 
   

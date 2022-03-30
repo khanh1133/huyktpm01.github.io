@@ -268,15 +268,7 @@ ul{
     font-weight: 900;
     font-size: 25px;
 }
-/* .home-section .home-text a {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: 2px solid var(--main-color);
-    color: var(--main-color);
-    text-transform: uppercase;
-    transition: all 0.5s ease;
-} */
+
 .btn:hover {
     background-color: var(--white-light);
     color: var(--main-color);
